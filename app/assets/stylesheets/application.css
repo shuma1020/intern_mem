@@ -12,4 +12,14 @@
  *
  *= require_tree .
  *= require_self
+
  */
+
+ .selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
+ .header  img {
+    width: 110px;
+}
+

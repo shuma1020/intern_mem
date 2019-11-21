@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+
 
   # GET /pages
   # GET /pages.json
@@ -61,6 +63,12 @@ class PagesController < ApplicationController
     end
   end
 
+  #GET /pages/intro added by shuma
+  def intro
+    @users = User.all
+   # @user.name = params[:name]
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page
@@ -71,4 +79,13 @@ class PagesController < ApplicationController
     def page_params
       params.require(:page).permit(:title, :content)
     end
+
+    def set_user
+      @user = Page.find(params[:id])
+    end
+
+    def page_params
+      params.require(:user).permit(:name, :email, :name )
+    end
+
 end
