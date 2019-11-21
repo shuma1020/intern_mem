@@ -29,7 +29,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link" href="#">Features</a>
+               <%=link_to "自己紹介登録", intro_path, method: :get, class:"nav-item nav-link"%>
               <%=link_to "ログアウト", destroy_user_session_path, method: :delete, class:"nav-item nav-link"%>
               <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </div>

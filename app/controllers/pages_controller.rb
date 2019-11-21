@@ -69,6 +69,8 @@ class PagesController < ApplicationController
    # @user.name = params[:name]
   end
 
+  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page
@@ -85,7 +87,7 @@ class PagesController < ApplicationController
     end
 
     def page_params
-      params.require(:user).permit(:name, :email, :name )
+      params.require(:user).permit(:name, :email )
     end
 
 end
